@@ -36,7 +36,7 @@ function RecentlyStacked() {
             <div className='h-full w-full pt-6'>
                 <div className='h-full w-full flex flex-col justify-center items-center gap-[50px]'>
                     <div className='flex justify-center items-center'>
-                        <h1 className='text-[30px] font-semibold'>RECENTLY STACKED</h1>
+                        <h1 className='text-[30px] font-bold'>RECENTLY STACKED</h1>
                     </div>
                     <div className='grid grid-cols-4 items-center justify-center gap-8 h-full w-[90%] '>
                         {

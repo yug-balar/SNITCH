@@ -108,7 +108,7 @@ function Searchbar() {
                     <div className="h-[100px] w-[90%] flex justify-center items-center relative">
                         <input
                             type="text"
-                            className="flex flex-grow h-[50%] w-full rounded-full pl-14 bg-[#F8F8F8] border-[0.5px] border-gray-400"
+                            className="flex flex-grow h-[50%] w-full rounded-full pl-14 bg-[#F8F8F8] border-[0.5px] border-gray-400 shadow-[0px_0px_3px_2px_rgba(147,147,147,0.3)]"
                             placeholder="Search"
                         />
                         <FontAwesomeIcon

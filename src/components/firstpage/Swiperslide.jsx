@@ -17,7 +17,7 @@ function Swiperslide() {
                 disableOnInteraction: false
             }}
             modules={[Pagination, Autoplay]}
-            className="pt-[100px]">
+        >
             <SwiperSlide>
                 <img src="https://www.snitch.co.in/cdn/shop/files/Artboard_1_7b54e1c3-29e3-48c3-a430-42ce2168ecc4_1400x.jpg?v=1717510887" alt="" />
             </SwiperSlide>
