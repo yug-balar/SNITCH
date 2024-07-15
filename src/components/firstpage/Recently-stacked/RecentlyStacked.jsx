@@ -57,8 +57,6 @@ function RecentlyStacked() {
                                 )
                             })
                         }
-
-
                     </div>
                 </div>
             </div>

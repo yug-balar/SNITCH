@@ -1,38 +1,58 @@
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 function MenuBar({ toggleMenu }) {
     const menudata = [
         {
-            title: "NEW ARRIVALS"
+            title: "NEW ARRIVALS",
+            link: "arrivals"
         },
         {
-            title: "BEST SELLING"
+            title: "BEST SELLING",
+            link: "arrivals"
+
         },
         {
-            title: "SNITCH LUXE"
+            title: "SNITCH LUXE",
+            link: "arrivals"
+
         },
         {
-            title: "SUITS & BLAZERS"
+            title: "SUITS & BLAZERS",
+            link: "arrivals"
+
         },
         {
-            title: "SHOP"
+            title: "SHOP",
+            link: "arrivals"
+
         },
         {
-            title: "TRACK ORDER"
+            title: "TRACK ORDER",
+            link: "arrivals"
+
         },
         {
-            title: "PLACE A RETURN / EXCHANGE REQUEST"
+            title: "PLACE A RETURN / EXCHANGE REQUEST",
+            link: "arrivals"
+
         },
         {
-            title: "COUSTOMER SUPPORT"
+            title: "COUSTOMER SUPPORT",
+            link: "arrivals"
+
         },
         {
-            title: "VISIT MORE"
+            title: "VISIT MORE",
+            link: "arrivals"
+
         },
         {
-            title: "RELOVE"
+            title: "RELOVE",
+            link: "arrivals"
+
         }
     ]
 
@@ -59,8 +79,10 @@ function MenuBar({ toggleMenu }) {
                                         <>
                                             <hr />
                                             <div className='flex h-full w-full items-center'>
+                                                <Link to={value.link}>
+                                                    <h3 key={index} className="font-[100] text-[19px] p-2">{value.title}</h3>
+                                                </Link>
 
-                                                <h3 key={index} className="font-[100] text-[19px] p-2">{value.title}</h3>
                                             </div>
                                         </>
                                     )

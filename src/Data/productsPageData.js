@@ -2,30 +2,35 @@ export const tabs = ["NEW DROPS", "MOST TRENDING"];
 
 export const Kid = [
   {
+    id: "1",
     src: "https://www.snitch.co.in/cdn/shop/files/648d79a94b5eb766c669a4f000fef8ac.webp?v=1717591205",
     title: "Bodil Black Striped Shirt",
     Discount: "INR 799",
     size: "S, M, L, XL, XLL",
   },
   {
+    id: "2",
     src: "https://www.snitch.co.in/cdn/shop/files/ca3cfac9adcbd567acd6e4293a94d00e.webp?v=1717596217",
     title: "Bodil Navy Striped Shirt",
     Discount: "INR 749",
     size: "S, M, L, XL, XLL",
   },
   {
+    id: "3",
     src: "https://www.snitch.co.in/cdn/shop/files/397a84c7c3df9564fa5263086949b28d.webp?v=1717584449",
     title: "Bodil Peach Striped Shirt",
     Discount: "INR 1,799",
     size: "S, M, L, XL, XLL",
   },
   {
+    id: "4",
     src: "https://www.snitch.co.in/cdn/shop/files/f4e10fae62de1a0fb3de41de56fc390a.webp?v=1717591545",
     title: "Bodil Grey Striped Shirt",
     Discount: "INR 1,199",
     size: "S, M, L, XL, XLL",
   },
   {
+    id: "5",
     src: "https://www.snitch.co.in/cdn/shop/files/0364049b0bdec0f7e12f81a71d5330b6.webp?v=1717591745",
     title: "Bodil Beige Striped Shirt",
     Discount: "INR 749",

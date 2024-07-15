@@ -3,10 +3,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import MenuBar from '../components/SearchBar/MenuBar';
+import { DrawerBag } from '../components/bag/Drawer';
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDrawer = () => {
+
+        if (!isOpen) {
+            window.document.body.style.overflow = "hidden";
+        } else {
+            window.document.body.style.overflow = "auto";
+        }
+        setIsOpen(!isOpen)
+    };
 
     const navigate = useNavigate()
 
@@ -23,8 +35,12 @@ function Navbar() {
         }
         setIsVisible(!isVisible)
     }
+
+    const gotToWishlist = () => {
+        navigate("/wishlist");
+    }
     const changeBackground = () => {
-        if (window.scrollY >= 10) {
+        if (window.scrollY >= 200) {
             setNavbar(true)
         }
         else {
@@ -71,7 +87,7 @@ function Navbar() {
     return (
         <>
 
-            <div className={navbar ? 'h-[100px] w-full flex items-center justify-between p-7 fixed z-50 bg-white transition ease-in-out duration-1000 delay-150' : 'h-[100px] w-full flex items-center justify-between p-7 z-50 bg-white  transition ease-in-out duration-1000 delay-150'}>
+            <div className={navbar ? 'h-[85px] w-full flex items-center justify-between p-7 fixed top-0 bottom-0 right-0 left-0  z-50000 bg-white ' : 'h-[85px] w-full flex items-center justify-between p-7 z-50 bg-white'}>
                 <div className='h-full  object-cover flex items-center justify-center ' onClick={() => toggleMenu()}>
                     <img className='h-[30px] cursor-pointer w-auto hover:translate-x-3 duration-300 ease-in-out' src="/image/bars.png" alt="" />
                 </div>
@@ -87,17 +103,18 @@ function Navbar() {
                             <img className='h-[25px] w-auto' src="/image/user2.png" alt="" />
                         </Link>
                     </div>
-                    <div id='searchBar'>
-                        <img onClick={() => gotToNewPage()} className='h-[30px] w-auto' src="/image/search2.png" alt="" />
+                    <div id='searchBar' onClick={() => gotToNewPage()}>
+                        <img className='h-[30px] w-auto' src="/image/search2.png" alt="" />
                     </div>
-                    <div>
+                    <div onClick={() => gotToWishlist()}>
                         <img className='h-[25px] w-auto' src="/image/like.png" alt="" />
                     </div>
-                    <div>
+                    <div onClick={toggleDrawer}>
                         <img className='h-[25px] w-auto' src="/image/bag2.png" alt="" />
                     </div>
                 </div>
                 {isVisible && <MenuBar toggleMenu={toggleMenu} />}
+                {isOpen && <DrawerBag isOpen={isOpen} toggleDrawer={toggleDrawer} />}
             </div>
 
         </>
