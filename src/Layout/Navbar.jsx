@@ -1,9 +1,13 @@
-import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import MenuBar from '../components/SearchBar/MenuBar';
 import { DrawerBag } from '../components/bag/Drawer';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Autoplay, Pagination } from 'swiper/modules';
 
 function Navbar() {
     const [navbar, setNavbar] = useState(false);
@@ -40,7 +44,7 @@ function Navbar() {
         navigate("/wishlist");
     }
     const changeBackground = () => {
-        if (window.scrollY >= 200) {
+        if (window.scrollY >= 100) {
             setNavbar(true)
         }
         else {
@@ -86,10 +90,33 @@ function Navbar() {
 
     return (
         <>
+            <div className='h-8 bg-black flex items-center justify-center text-white w-full'>
+                <Swiper
+                    loop={true}
+                    autoplay={{
+                        delay: "5000",
+                        disableOnInteraction: false
+                    }}
+                    modules={[Pagination, Autoplay]}
+                    className='h-full w-full flex items-center justify-center'
+                >
+                    <SwiperSlide className='h-full w-full flex items-center justify-center text-[10px] text-white tracking-[3px] font-extrabold'>
+                        <h2>FLAT 10% OFF ON YOUR 1ST APP PURCHASE <span className='underline text-[12px]'>DOWNLOAD APP</span></h2>
+                    </SwiperSlide>
+                    <SwiperSlide className='h-full w-full flex items-center justify-center text-[10px] text-white tracking-[3px] font-extrabold'>
+                        <h2>FLAT 40% OFF ON SELEXT COLLECTION <span className='underline text-[12px]'>USE CODE : WOW40</span></h2>
 
-            <div className={navbar ? 'h-[85px] w-full flex items-center justify-between p-7 fixed top-0 bottom-0 right-0 left-0  z-50000 bg-white ' : 'h-[85px] w-full flex items-center justify-between p-7 z-50 bg-white'}>
-                <div className='h-full  object-cover flex items-center justify-center ' onClick={() => toggleMenu()}>
-                    <img className='h-[30px] cursor-pointer w-auto hover:translate-x-3 duration-300 ease-in-out' src="/image/bars.png" alt="" />
+                    </SwiperSlide>
+                    <SwiperSlide className='h-full w-full flex items-center justify-center text-[10px] text-white tracking-[3px] font-extrabold'>
+                        <h2>GET FLAT 20% OFF ON PERCHASE OF Rs. 3999. USE CODE :FLAT20 <span className='underline text-[12px]'>USE CODE :BUY4</span></h2>
+
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className={navbar ? 'h-[85px] w-full flex items-center justify-between p-7 sticky top-0 bottom-0 right-0 left-0 z-50 bg-white' : 'h-[85px] w-full flex  z-50 items-center justify-between p-7 bg-white'}>
+                <div className='h-full  object-cover flex items-center justify-center hover:translate-x-3 duration-300 ease-in-out' onClick={() => toggleMenu()}>
+                    <img className='h-[30px] cursor-pointer w-auto ' src="/image/bars.png" alt="" />
                 </div>
                 <div className='h-full  flex items-center justify-center'>
                     <Link to="/">

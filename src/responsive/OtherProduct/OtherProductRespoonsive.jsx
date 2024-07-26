@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import OtherProductRepo from './OtherProductRepo';
-import Otherproduct from "./Otherproduct";
+import OtherProductRepo from "./OtherProductRepo"
+import Otherproduct from "./Otherproduct"
 
 
 function OtherProductRespoonsive() {

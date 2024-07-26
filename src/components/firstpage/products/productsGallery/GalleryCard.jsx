@@ -1,4 +1,3 @@
-import { Button } from "flowbite-react";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../bag/cartSlice";
@@ -18,10 +17,10 @@ function GalleryCard(props) {
             <img src={props.product.src} alt="" />
           </div>
           <div className="flex flex-col gap-2">
-            <h3 className="text-[14px]">{props.product.title}</h3>
-            <p className="text-[14px]">{props.product.Discount}</p>
+            <h3 className="text-[14px] font-black tracking-[1.5px] text-black">{props.product.title}</h3>
+            <p className="text-[14px] font-black tracking-[1.5px]">{props.product.Discount}</p>
             <div className="flex gap-2 text-[#6A6A6A]">
-              <p className="text-[14px] ">{props.product.size}</p>
+              <p className="text-[14px] font-black ">{props.product.size}</p>
             </div>
           </div>
           <div className="flex items-center justify-between">

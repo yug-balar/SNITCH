@@ -11,7 +11,7 @@ import { DrawerBag } from './components/bag/Drawer'
 import { Provider } from 'react-redux'
 import store from './components/bag/store'
 import Wishlist from './components/SearchBar/Wishlist'
-import Newarrivals from './components/menuComponent/new-Arrivals/Newarrivals'
+import Newarrivals from './components/menuComponent/new-Arrivals/productsGallery/Newarrivals'
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
     Aos.init();
   })
   return (
+
     <Provider store={store}>
       <BrowserRouter>
         <Routes>

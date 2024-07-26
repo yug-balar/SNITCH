@@ -78,12 +78,12 @@ function MenuBar({ toggleMenu }) {
                                     return (
                                         <>
                                             <hr />
-                                            <div className='flex h-full w-full items-center'>
-                                                <Link to={value.link}>
+                                            <Link to={value.link}>
+                                                <div className='flex h-full w-full items-center' onClick={() => toggleMenu()}>
                                                     <h3 key={index} className="font-[100] text-[19px] p-2">{value.title}</h3>
-                                                </Link>
 
-                                            </div>
+                                                </div>
+                                            </Link>
                                         </>
                                     )
                                 })}

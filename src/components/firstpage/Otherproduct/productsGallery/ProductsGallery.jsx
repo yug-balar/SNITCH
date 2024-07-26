@@ -12,10 +12,10 @@ function ProductsGallery(props) {
   return (
     <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 4, 900: 4 }}>
       <Masonry gutter="-6px">
-        {products[activeTab].map(function (img, index) {
+        {products[activeTab].map(function (value, index) {
           return (
             <>
-              <GalleryCard key={index} src={img.src} title={img.title} Discount={img.Discount} size={img.size} />
+              <GalleryCard key={index} product={value} />
             </>
           );
         })}
