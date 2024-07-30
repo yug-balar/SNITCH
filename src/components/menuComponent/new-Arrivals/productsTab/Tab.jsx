@@ -14,15 +14,18 @@ function Tab(props) {
   const data = tab.extraData
   return (
     <div>
-      <div className="flex flex-col gap-1 overflow-y-scroll h-[200px]">
+      <div className="flex flex-col gap-2 h-[200px]">
         {tab.title}
-        {data.map((value) => {
-          return (
-            <p className="text-[12px] cursor-pointer font-light" onClick={() => {
-              setActiveTab(value.title)
-            }}>{value.title}</p>
-          )
-        })}
+        <div className="flex flex-col gap-2 overflow-y-scroll h-[200px]">
+
+          {data.map((value) => {
+            return (
+              <p className="text-[12px] cursor-pointer font-light" onClick={() => {
+                setActiveTab(value.title)
+              }}>{value.title}</p>
+            )
+          })}
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ function Newarrivals() {
             <div className='h-full w-[80%] flex items-end justify-end px-5'>
 
                 <div className='grid grid-cols-4 h-full w-full gap-0'>
-                    <ProductsGallery activeTab={activeCategory} />
+                    <ProductsGallery activeCategory={activeCategory} />
                 </div>
             </div>
 
